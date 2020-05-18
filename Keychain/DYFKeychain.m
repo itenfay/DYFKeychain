@@ -2,7 +2,7 @@
 //  DYFKeychain.m
 //
 //  Created by dyf on 2014/11/4.
-//  Copyright © 2014 dyf.
+//  Copyright © 2014 dyf. ( https://github.com/dgynfi/DYFStoreKit )
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
