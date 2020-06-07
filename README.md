@@ -97,16 +97,16 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 [keychain add:@"xxx" forKey:@"Key1" options:DYFKeychainAccessOptionsAccessibleWhenUnlocked];
 ```
 
-You can use `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` if you need your app to access the keychain item while in the background. Note that it is less secure than the `.DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` option.
+You can use `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` if you need your app to access the keychain item while in the background. Note that it is less secure than the `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` option.
 
 See the list of all available [access options](https://github.com/dgynfi/DYFKeychain/blob/master/Keychain/DYFKeychain.h).
 
 
 #### Synchronizing keychain items with other devices
 
-Set `synchronizable` property to `true` to enable keychain items synchronization across user's multiple devices. The synchronization will work for users who have the "Keychain" enabled in the iCloud settings on their devices.
+Set `synchronizable` property to `YES` to enable keychain items synchronization across user's multiple devices. The synchronization will work for users who have the "Keychain" enabled in the iCloud settings on their devices.
 
-Setting `synchronizable` property to `true` will add the item to other devices with the `add` method and obtain synchronizable items with the `get` command. Deleting a synchronizable item will remove it from all devices.
+Setting `synchronizable` property to `YES` will add the item to other devices with the `add` method and obtain synchronizable items with the `get` command. Deleting a synchronizable item will remove it from all devices.
 
 Note that you do not need to enable iCloud or Keychain Sharing capabilities in your app's target for this feature to work.
 
