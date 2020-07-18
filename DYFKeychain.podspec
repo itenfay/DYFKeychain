@@ -2,8 +2,8 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DYFKeychain"
-  spec.version      = "1.0.0"
-  spec.summary      = "A library for storing text and data in Keychain. (ObjC)"
+  spec.version      = "1.0.1"
+  spec.summary      = "A library for storing text and data in Keychain. (Objective-C)"
 
   spec.description  = <<-DESC
 	This library is used to store text and data in Keychain securely for iOS, OS X, tvOS and watchOS. (Objective-C)
