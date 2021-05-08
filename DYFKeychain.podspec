@@ -2,11 +2,11 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "DYFKeychain"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "A library for storing text and data in Keychain. (Objective-C)"
 
   spec.description  = <<-DESC
-	This library is used to store text and data in Keychain securely for iOS, OS X, tvOS and watchOS. (Objective-C)
+	    This library is used to store text and data in Keychain securely for iOS, OS X, tvOS and watchOS. (Objective-C)
                    DESC
 
   spec.homepage      = "https://github.com/dgynfi/DYFKeychain"
@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.platform   = :ios
   # spec.platform = :ios, "5.0"
 
-  spec.ios.deployment_target 	 = "8.0"
+  spec.ios.deployment_target 	 = "7.0"
   spec.osx.deployment_target 	 = "10.10"
   spec.watchos.deployment_target = "3.0"
   spec.tvos.deployment_target 	 = "9.0"
