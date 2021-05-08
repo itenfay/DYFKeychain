@@ -34,7 +34,7 @@ NSString *p = [keychain get:@"kUserAccPasscode"];
 ``` 
 target 'Your target name'
 
-pod 'DYFKeychain', '~> 1.0.2'
+pod 'DYFKeychain', '~> 1.0.3'
 ```
 
 或者从 [Keychain](https://github.com/dgynfi/DYFKeychain/tree/master/Keychain) 目录手动添加文件。

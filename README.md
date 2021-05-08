@@ -36,7 +36,7 @@ Using [CocoaPods](https://cocoapods.org):
 ``` 
 target 'Your target name'
 
-pod 'DYFKeychain', '~> 1.0.2'
+pod 'DYFKeychain', '~> 1.0.3'
 ```
 
 Or manually add the files from the [Keychain](https://github.com/dgynfi/DYFKeychain/tree/master/Keychain) directory.
