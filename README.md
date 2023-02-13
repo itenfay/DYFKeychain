@@ -25,7 +25,7 @@ The Keychain library includes the following features:
 ## Group (ID:614799921)
 
 <div align=left>
-&emsp; <img src="https://github.com/dgynfi/DYFKeychain/raw/master/images/g614799921.jpg" width="30%" />
+&emsp; <img src="https://github.com/chenxing640/DYFKeychain/raw/master/images/g614799921.jpg" width="30%" />
 </div>
 
 
@@ -36,10 +36,12 @@ Using [CocoaPods](https://cocoapods.org):
 ``` 
 target 'Your target name'
 
-pod 'DYFKeychain', '~> 1.0.3'
+pod 'DYFKeychain'
+or
+pod 'DYFKeychain', '~> 1.1.0'
 ```
 
-Or manually add the files from the [Keychain](https://github.com/dgynfi/DYFKeychain/tree/master/Keychain) directory.
+Or manually add the files from the [Keychain](https://github.com/chenxing640/DYFKeychain/tree/master/Keychain) directory.
 
 
 ## What's Keychain?
@@ -97,7 +99,7 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 
 You can use `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` if you need your app to access the keychain item while in the background. Note that it is less secure than the `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` option.
 
-See the list of all available [access options](https://github.com/dgynfi/DYFKeychain/blob/master/Keychain/DYFKeychain.h).
+See the list of all available [access options](https://github.com/chenxing640/DYFKeychain/blob/master/Keychain/DYFKeychain.h).
 
 
 #### Synchronizing keychain items with other devices
@@ -180,9 +182,10 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 
 ## Demo
 
-`DYFKeychain` is learned how to use under this [Demo](https://github.com/dgynfi/DYFStoreKit/blob/master/DYFStoreKit/DYFStoreKeychainPersistence.m).
+`DYFKeychain` is learned how to use under this [Demo](https://github.com/chenxing640/DYFStoreKit/blob/master/DYFStoreKit/DYFStoreKeychainPersistence.m).
 
 
 ## Feedback is welcome
 
-If you notice any issue, got stuck or just want to chat feel free to create an issue. I will be happy to help you.
+If you notice any issue, got stuck to create an issue. I will be happy to help you.
+

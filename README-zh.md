@@ -23,7 +23,7 @@ NSString *p = [keychain get:@"kUserAccPasscode"];
 ## QQ群 (ID:614799921)
 
 <div align=left>
-&emsp; <img src="https://github.com/dgynfi/DYFKeychain/raw/master/images/g614799921.jpg" width="30%" />
+&emsp; <img src="https://github.com/chenxing640/DYFKeychain/raw/master/images/g614799921.jpg" width="30%" />
 </div>
 
 
@@ -34,10 +34,12 @@ NSString *p = [keychain get:@"kUserAccPasscode"];
 ``` 
 target 'Your target name'
 
-pod 'DYFKeychain', '~> 1.0.3'
+pod 'DYFKeychain'
+or
+pod 'DYFKeychain', '~> 1.1.0'
 ```
 
-或者从 [Keychain](https://github.com/dgynfi/DYFKeychain/tree/master/Keychain) 目录手动添加文件。
+或者从 [Keychain](https://github.com/chenxing640/DYFKeychain/tree/master/Keychain) 目录手动添加文件。
 
 
 ## 什么是 Keychain?
@@ -95,7 +97,7 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 
 如果需要应用程序在后台访问钥匙串项，则可以使用 `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock`。请注意，它比 `DYFKeychainAccessOptionsAccessibleAfterFirstUnlock` 选项更不安全。
 
-查看所有可用的 [访问选项](https://github.com/dgynfi/DYFKeychain/blob/master/Keychain/DYFKeychain.h) 列表。
+查看所有可用的 [访问选项](https://github.com/chenxing640/DYFKeychain/blob/master/Keychain/DYFKeychain.h) 列表。
 
 
 #### 将钥匙串项与其他设备同步
@@ -178,9 +180,9 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 
 ## 演示
 
-`DYFSwiftKeychain` 在此 [演示](https://github.com/dgynfi/DYFStoreKit/blob/master/DYFStoreKit/DYFStoreKeychainPersistence.m) 下学习如何使用。
+`DYFKeychain` 在此 [演示](https://github.com/chenxing640/DYFStoreKit/blob/master/DYFStoreKit/DYFStoreKeychainPersistence.m) 下学习如何使用。
 
 
 ## 欢迎反馈
 
-如果你注意到任何问题，被卡住或只是想聊天，请随意制造一个问题。我乐意帮助你。
+如果你注意到任何问题被卡住，请制造一个问题。我乐意帮助你。

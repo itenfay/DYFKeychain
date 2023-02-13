@@ -1,8 +1,8 @@
 //
 //  DYFKeychain.m
 //
-//  Created by dyf on 2014/11/4. ( https://github.com/dgynfi/DYFKeychain )
-//  Copyright © 2014 dyf. All rights reserved.
+//  Created by chenxing on 2014/11/4. ( https://github.com/chenxing640/DYFKeychain )
+//  Copyright © 2014 chenxing. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,6 @@
     keychain.serviceIdentifier = self.serviceIdentifier;
     keychain.queryDictionary   = self.queryDictionary;
     keychain.osStatus          = self.osStatus;
-    
     return keychain;
 }
 
@@ -92,7 +91,6 @@
 }
 
 - (BOOL)addData:(NSData *)value forKey:(NSString *)key options:(DYFKeychainAccessOptions)options {
-    
     // The lock prevents the code to be run simultaneously from multiple threads which may result in crashing.
     [self.lock lock];
     
@@ -106,7 +104,6 @@
     CFTypeRef ignore = nil;
     OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &ignore);
     if (status != errSecSuccess) {
-        
         if (value) {
             query[DYFKeychainConstants.valueData] = value;
             self.queryDictionary[DYFKeychainConstants.valueData] = value;
@@ -114,7 +111,6 @@
         } else {
             self.osStatus = errSecInvalidPointer; // -67675, An invalid pointer was encountered.
         }
-        
         return self.osStatus == errSecSuccess;
     }
     
@@ -140,12 +136,10 @@
 - (BOOL)addBool:(BOOL)value forKey:(NSString *)key options:(DYFKeychainAccessOptions)options {
     NSString *v = value ? @"1" : @"0";
     NSData *data = [v dataUsingEncoding:NSUTF8StringEncoding];
-    
     return [self addData:data forKey:key options:options];
 }
 
 - (NSString *)get:(NSString *)key {
-    
     NSData *data = [self getData:key];
     if (!data) { return nil; }
     
@@ -163,7 +157,6 @@
 }
 
 - (NSData *)getData:(NSString *)key asReference:(BOOL)asReference {
-    
     [self.lock lock];
     
     NSMutableDictionary *query = [self supplyQueryDictionary:NO];
@@ -190,20 +183,16 @@
 }
 
 - (BOOL)getBool:(NSString *)key {
-    
     NSData *data = [self getData:key];
     if (!data) { return NO; }
-    
     NSString *s = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     return [s boolValue];
 }
 
 - (BOOL)delete:(NSString *)key {
-    
     [self.lock lock];
     BOOL ret = [self deleteWithoutLock:key];
     [self.lock unlock];
-    
     return ret;
 }
 
@@ -214,7 +203,6 @@
  @return True if the item was successfully deleted, false otherwise.
  */
 - (BOOL)deleteWithoutLock:(NSString *)key {
-    
     NSMutableDictionary *query = [self supplyQueryDictionary:NO];
     query[DYFKeychainConstants.account] = key;
     self.queryDictionary = query;
@@ -225,12 +213,10 @@
 }
 
 - (BOOL)clear {
-    
     [self.lock lock];
     
     NSMutableDictionary *query = [self supplyQueryDictionary:NO];
     self.queryDictionary = query;
-    
     self.osStatus = SecItemDelete((__bridge CFDictionaryRef)query);
     
     [self.lock unlock];
@@ -245,7 +231,6 @@
  @return A query dictionary to modify the keychain item.
  */
 - (NSMutableDictionary *)supplyQueryDictionary:(BOOL)shouldAddItem {
-    
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
     query[DYFKeychainConstants.kClass] = (__bridge id)kSecClassGenericPassword;
     
@@ -268,7 +253,6 @@
 /** Converts a corresponding enumeration value to a string.
  */
 - (NSString *)stringWithOptions:(DYFKeychainAccessOptions)opts {
-    
     NSString *options = @"";
     
     switch (opts) {
