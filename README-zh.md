@@ -185,4 +185,4 @@ DYFKeychain *keychain = [DYFKeychain createKeychain];
 
 ## 欢迎反馈
 
-如果你注意到任何问题被卡住，请制造一个问题。我乐意帮助你。
+如果你注意到任何问题被卡住，请创建一个问题。我乐意帮助你。

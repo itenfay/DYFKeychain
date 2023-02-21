@@ -21,7 +21,6 @@ Pod::Spec.new do |spec|
 
   # spec.platform   = :ios
   # spec.platform = :ios, "5.0"
-
   spec.ios.deployment_target 	 = "7.0"
   spec.osx.deployment_target 	 = "10.10"
   spec.watchos.deployment_target = "3.0"
@@ -30,9 +29,8 @@ Pod::Spec.new do |spec|
   spec.source = { :git => "https://github.com/chenxing640/DYFKeychain.git", :tag => spec.version }
 
   spec.source_files    = "Keychain/*.{h,m}"
-  # spec.exclude_files = "Classes/Exclude"
-
   spec.public_header_files = "Keychain/*.h"
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
