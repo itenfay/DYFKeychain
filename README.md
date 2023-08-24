@@ -1,6 +1,8 @@
+English Vision | [中文版](README-zh.md)
+
 ## DYFKeychain
 
-This is used to store text and data in the Keychain. As you probably noticed Apple's keychain API is a bit verbose. This library was designed to provide shorter syntax for accomplishing a simple task: reading/writing text values for specified keys:
+This is used to store text and data in the Keychain([Swift Version](https://github.com/chenxing640/DYFSwiftKeychain)). As you probably noticed Apple's keychain API is a bit verbose. This library was designed to provide shorter syntax for accomplishing a simple task: reading/writing text values for specified keys:
 
 ```objc
 DYFKeychain *keychain = [DYFKeychain createKeychain];
@@ -18,8 +20,6 @@ The Keychain library includes the following features:
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](LICENSE)&nbsp;
 [![CocoaPods Version](http://img.shields.io/cocoapods/v/DYFKeychain.svg?style=flat)](http://cocoapods.org/pods/DYFKeychain)&nbsp;
 ![CocoaPods Platform](http://img.shields.io/cocoapods/p/DYFKeychain.svg?style=flat)&nbsp;
-
-[Chinese Instructions (中文说明)](README-zh.md)
 
 
 ## Group (ID:614799921)
