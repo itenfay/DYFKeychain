@@ -1,23 +1,22 @@
 
 Pod::Spec.new do |spec|
-
   spec.name         = "DYFKeychain"
-  spec.version      = "1.1.0"
-  spec.summary      = "A library for storing text and data in Keychain. (Objective-C)"
+  spec.version      = "1.2.0"
+  spec.summary      = "[ObjC] A library for storing text and data in Keychain."
 
   spec.description  = <<-DESC
-	    This library is used to store text and data in Keychain securely for iOS, OS X, tvOS and watchOS. (Objective-C)
-                   DESC
+  TODU: [ObjC] This library is used to store text and data in Keychain securely for iOS, OS X, tvOS and watchOS.
+  DESC
 
-  spec.homepage      = "https://github.com/chenxing640/DYFKeychain"
+  spec.homepage      = "https://github.com/itenfay/DYFKeychain"
   # spec.screenshots = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
   spec.license = { :type => "MIT", :file => "LICENSE" }
 
-  spec.author             = { "chenxing" => "chenxing640@foxmail.com" }
-  # Or just: spec.author  = "chenxing"
-  # spec.authors          = { "chenxing" => "chenxing640@foxmail.com" }
-  # spec.social_media_url = "https://twitter.com/chenxing"
+  spec.author             = { "Tenfay" => "itenfay@163.com" }
+  # Or just: spec.author  = "Tenfay"
+  # spec.authors          = { "Tenfay" => "itenfay@163.com" }
+  # spec.social_media_url = "https://twitter.com/Tenfay"
 
   # spec.platform   = :ios
   # spec.platform = :ios, "5.0"
@@ -26,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.watchos.deployment_target = "3.0"
   spec.tvos.deployment_target 	 = "9.0"
 
-  spec.source = { :git => "https://github.com/chenxing640/DYFKeychain.git", :tag => spec.version }
+  spec.source = { :git => "https://github.com/itenfay/DYFKeychain.git", :tag => spec.version }
 
   spec.source_files    = "Keychain/*.{h,m}"
   spec.public_header_files = "Keychain/*.h"
@@ -47,5 +46,4 @@ Pod::Spec.new do |spec|
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
-
 end

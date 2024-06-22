@@ -1,8 +1,8 @@
 //
 //  DYFKeychain.m
 //
-//  Created by chenxing on 2014/11/4. ( https://github.com/chenxing640/DYFKeychain )
-//  Copyright © 2014 chenxing. All rights reserved.
+//  Created by Tenfay on 2014/11/4. ( https://github.com/itenfay/DYFKeychain )
+//  Copyright © 2014 Tenfay. All rights reserved.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -35,7 +35,7 @@
 
 @implementation DYFKeychain
 
-+ (DYFKeychain *)createKeychain {
++ (DYFKeychain *)defaultKeychain {
     return [[self.class alloc] init];
 }
 
@@ -64,7 +64,7 @@
  @return A DYFKeychain object.
  */
 - (id)copy {
-    DYFKeychain *keychain = [self.class createKeychain];
+    DYFKeychain *keychain = [self.class defaultKeychain];
     keychain.accessGroup       = self.accessGroup;
     keychain.synchronizable    = self.synchronizable;
     keychain.serviceIdentifier = self.serviceIdentifier;

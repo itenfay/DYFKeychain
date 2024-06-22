@@ -30,11 +30,8 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
-## Others
-
+## MacOS
 .DS_Store
-*/.DS_Store
-*/*/.DS_Store
 
 # CocoaPods
 #
